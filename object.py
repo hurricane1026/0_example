@@ -29,3 +29,7 @@ console = Console(dev_token)
 
 tenant = console.get_tenant("example_company")
 
+leads_obj = CreateLeads()
+tenant.add_object(leads_obj)
+
+console.deploy(after_time="now")
